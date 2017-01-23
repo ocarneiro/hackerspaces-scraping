@@ -3,9 +3,9 @@ from bs4 import BeautifulSoup as bs
 import requests
 import csv
 
-filename = 'hackerspaces.csv'
+filename = 'hackerspaces2000.csv'
 
-url = 'https://wiki.hackerspaces.org/Special:Ask/-5B-5BCategory:Hackerspace-5D-5D/-3F=Hackerspace-23/-3F=Hackerspace-23/-3F=Hackerspace-23/-3FCountry/-3FState/-3FCity/-3FWebsite/-3FDate-20of-20founding/-3FHackerspace-20status/format=broadtable/limit=500/sort=Country/mainlabel=Hackerspace/offset=0'
+url = 'https://wiki.hackerspaces.org/Special:Ask/-5B-5BCategory:Hackerspace-5D-5D/-3F=Hackerspace-23/-3F=Hackerspace-23/-3F=Hackerspace-23/-3FCountry/-3FState/-3FCity/-3FWebsite/-3FDate-20of-20founding/-3FHackerspace-20status/format=broadtable/limit=500/sort=Date of founding/mainlabel=Hackerspace/offset=2000'
 r = requests.get(url)
 soup = bs(r.text, 'html.parser')
 t = soup.table
