@@ -6,6 +6,7 @@ import csv
 filename = 'hackerspaces.csv'
 
 url = 'https://wiki.hackerspaces.org/Special:Ask/-5B-5BCategory:Hackerspace-5D-5D/-3F=Hackerspace-23/-3F=Hackerspace-23/-3F=Hackerspace-23/-3FCountry/-3FState/-3FCity/-3FWebsite/-3FDate-20of-20founding/-3FHackerspace-20status/format=broadtable/limit=10/sort=Country/mainlabel=Hackerspace/offset=300'
+
 r = requests.get(url)
 soup = bs(r.text, 'html.parser')
 t = soup.table
@@ -26,6 +27,3 @@ for tr in trs:
         current_hs[key] = tds[i].text
     current_hs['data-sort-value'] = tds[6]['data-sort-value']
     hackerspaces.append(current_hs)
-
-
-    
