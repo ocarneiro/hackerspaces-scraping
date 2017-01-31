@@ -1,2 +1,5 @@
 venv3
 data
+try*
+v3
+*.log
