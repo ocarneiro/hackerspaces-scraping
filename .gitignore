@@ -3,3 +3,5 @@ data
 try*
 v3
 *.log
+output
+*.zip
