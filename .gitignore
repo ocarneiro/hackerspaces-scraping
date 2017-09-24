@@ -4,3 +4,4 @@ try*
 *.log
 output
 *.zip
+env
